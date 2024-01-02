@@ -19,14 +19,14 @@ function each(coll, f) {
     });
     return acc;
   }
-  function vacationInfo(name, email, numberP, sDate,textTitle) {
+  function vacationInfo(name, email, numberP, sDate) {
    
     return {
         name: name,
         email: email,
         numberP: numberP,
         sDate: sDate,
-        textTitle:textTitle
+       
     };
 }
 
@@ -35,7 +35,7 @@ function bookVacation() {
     var book = {};
     book.vacations = [];
 
-    book.add = function (name, email, numberP, sDate,textTitle) {
+    book.add = function (name, email, numberP, sDate) {
         this.vacations.push(vacationInfo(name, email, numberP, sDate));
         updateVacationList();
     };
@@ -58,9 +58,8 @@ function addVacation() {
     var sDate = sDateInput.value;
     
    
-    var textTitle = cardElement.querySelector('.text-title').innerText;
-
-    vacationBook.add(name, email, numberP, sDate,textTitle);
+    
+    vacationBook.add(name, email, numberP, sDate);
 
     nameInput.value = '';
     emailInput.value = '';
@@ -69,11 +68,11 @@ function addVacation() {
 }
 
 
-function updateVacationList(filteredVacations) {
-    var vacationsToDisplay = filteredVacations || vacationBook.vacations;
+function updateVacationList() {
+    var vacationsToDisplay = vacationBook.vacations;
 
     each(vacationsToDisplay, function (vacation, index) {
-   var message ='Mr/Mrs ' + vacation.name +'Your vacation was booked successfully. We will contact you before '+vacation.sDate
+   var message ='Mr/Mrs ' + vacation.name +' Your vacation was booked successfully. We will contact you before '+vacation.sDate
    alert(message);
     });
 }
@@ -94,15 +93,6 @@ document.getElementById('reservationModal').style.display = 'none';
 
 
 
-window.onclick = function(event) {
-
-    var modal = document.getElementById('reservationModal');
-
-    if (event.target === modal) {
-
-        modal.style.display = 'none';
-    }
-}
 
 
 
