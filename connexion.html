@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <style>
+        .secondbar {
+    background-color: #003;
+    color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navigation-bar a {
+    color:white;
+    text-decoration: none;
+    margin-right: 50px;
+    
+  }
+  .logo img {
+    height: 130px;
+    width: 130px; 
+  }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        form {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+    <div class="secondbar">
+        <div class="logo">
+            <a href="index.html">
+          <img src="/images/Yellow and Green Modern Illustration Tour and Travel Agency Logo (1).png" alt="Logo">
+            </a> </div>
+
+        <div class="navigation-bar">
+            <a href="index.html" style="font-size: 26px;">&nbsp;&nbsp;&nbsp;HOME</a>
+        </div>
+      </div>
+</head>
+<body>
+  
+<form id="loginForm">
+    <label for="username">User name:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">passe word:</label>
+    <input type="password" id="password" name="password" required>
+
+    <button type="button" onclick="login()">Connexion</button>
+</form>
+
+<script>
+    // fonction login
+    function login() {
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        if (username === 'mohamed' && password === 'rouihem') {
+            window.location.href = 'addvacation.html';
+        } else {
+            alert('Invalid username or password. Please try again.');
+        }
+    }
+</script>
+
+</body>
+</html>

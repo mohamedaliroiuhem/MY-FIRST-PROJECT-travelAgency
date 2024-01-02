@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visitify</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="/slides/sildesCss.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="phoneemail">
+         <p> <span class="tel">Tel :</span> (+216)  72 02 02 02   <span class="tel">Email :</span> contact@visitify.tn</p>  
+        </div>
+      </div>
+      <div class="secondbar">
+        <div class="logo">
+            <a href="index.html">
+          <img src="/images/Yellow and Green Modern Illustration Tour and Travel Agency Logo (1).png" alt="Logo">
+            </a> </div>
+        <div class="navigation-bar">
+          <a href="#">HOME</a>
+          <a href="#cardSection">Top Destinations</a>
+          <a href="#cardSection2">Discover Tunisia</a>
+          <a href="/connexion.html">Log in</a>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+
+      </div>
+      
+      <div class="slideshow-container">
+        <div class="mySlides">
+          <img src="/images/slide/tabarka.jpg" >
+          <div class="text">
+            tabarka
+          </div>
+        </div>
+      
+        <div class="mySlides">
+          <img src="/images/slide/soussa.jpg" >
+          <div class="text">
+            sousse
+          </div>
+        </div>
+      
+        <div class="mySlides">
+          <img src="/images/slide/sidi.jpg" >
+          <div class="text">
+            sidi bousaid
+          </div>
+        </div>
+      
+        <div class="mySlides">
+          <img src="/images/slide/hammamet.jpg">
+          <div class="text">
+            hammamet
+          </div>
+        </div>
+      
+        <div class="mySlides">
+          <img src="/images/slide/ain.jpg" >
+          <div class="text">
+            ain drahem
+          </div>
+        </div>
+      
+       
+        <div class="button-container">
+          <button class="button" onclick="plusDivs(-1)">
+            <svg fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"></path>
+            </svg>
+            <div class="text1">Previous</div>
+          </button>
+      
+          <button class="button" onclick="plusDivs(1)">
+            <svg  fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+            <div class="text1">Next</div>
+          </button>
+        </div>
+      
+      </div>
+      
+          
+      </div>
+      
+        <h1>Top Destinations</h1>
+        
+        <div class="card-container" id="cardSection">
+            <div class="card" id="cardId">
+      <img src="/images/cards/image.webp" alt="Card Image">
+       <div class="card-details">
+          <p class="text-title">Barcelona</p>
+          <p class="text-info"><strong>a 6 days vacation</strong></p>
+          <p class="text-info">Prix: 2500 TND</p>
+                         </div>
+     <button class="card-button" onclick="openReservationForm()">book</button>
+        </div>
+      <div class="card">
+        <div class="card-details">
+       <img src="/images/cards/paris.jpg"alt="rabat">
+      <p class="text-title">Paris</p>
+      <p class="text-info"><strong>a 6 days vacation</strong></p>
+      <p class="text-info">Prix: 2700 TND</p>
+      </div>
+      <button class="card-button" onclick="openReservationForm()">book</button>
+    </div> <div class="card">
+    <div class="card-details">
+      <img src="/images/cards/houses-parliament-big-ben-double-780545902.webp" alt="card">
+    <p class="text-title">london</p>
+    <p class="text-info"><strong>a 6 days vacation</strong></p>
+    <p class="text-info">Prix: 3000 TND</p>
+ </div>
+ <button class="card-button" onclick="openReservationForm()">book</button>
+   </div> <div class="card">
+  <div class="card-details">
+    <img src="/images/cards/tokyo.jpg" alt="card">
+      <p class="text-title">tokyo</p>
+      <p class="text-info"><strong>a 6 days vacation</strong></p>
+      <p class="text-info">Prix: 2600 TND</p>
+  </div>
+  <button class="card-button" onclick="openReservationForm()">book</button>
+  
+  </div>
+
+<div class="card">
+   <div class="card-details">
+    <img src="/images/cards/istanbul.webp" alt="card">
+      <p class="text-title" id="textTitle">instanbul</p>
+      <p class="text-info"><strong>a 6 days vacation</strong></p>
+      <p class="text-info">Prix: 2000 TND</p>
+   </div>
+   <button class="card-button" onclick="openReservationForm()">book</button>
+            </div>
+          
+   </div>
+
+   <div id="reservationModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeReservationForm()">&times;</span>
+        <h2>Reservation</h2>
+        <form onsubmit="submitReservationForm(event)">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="adults">number of persons:</label>
+            <input type="number" id="numberP" name="adults" min="0" required>
+
+            <label for="date">starting date:</label>
+            <input type="date" id="sDate" name="date" min="0" required>
+
+            <button type="submit"  onclick="addVacation()">boook</button>
+        </form>
+       
+    </div><div class="card-container" id="vacationList"></div>
+</div>
+
+  </div>
+   <h1>Discover Tunisia</h1>
+   
+   <div class="card-container" id="cardSection2">
+    <div class="card">
+        <img src="images/slide/hammamet.jpg" alt="Card Image 1">
+        <div class="card-content">
+            <p class="card-title">hammamet</p>
+            <p class="card-description">It is a very beautiful tourist city, a true focal point of attraction for both tourists and Tunisians.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/slide/douz.jpg" alt="Card Image 2">
+        <div class="card-content">
+            <p class="card-title">douz</p>
+            <p class="card-description">The city of Douz is a small town in central-southern Tunisia. It is considered the Gateway to the Sahara.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="images/slide/sousse.jpg" alt="Card Image 3">
+        <div class="card-content">
+            <p class="card-title">sousse</p>
+            <p class="card-description">Sousse is the beautiful capital of the Sahel region in Tunisia. A mild climate welcomes you to its white sandy beaches.</p>
+        </div>
+    </div>
+    <div class="card">
+      <img src="images/slide/ain.jpg" alt="Card Image 3">
+      <div class="card-content">
+          <p class="card-title">Ain draham</p>
+          <p class="card-description">Aïn Draham is a charming small mountain town in the heart of a cork oak forest.</p>
+      </div>
+  </div>
+  <div class="card">
+    <img src="images/slide/sidi.jpg" alt="Card Image 3">
+    <div class="card-content">
+        <p class="card-title">Sidi bousaid</p>
+        <p class="card-description">A small hilltop village with blue and white houses that offers an incredible view of the Gulf of Tunis and Carthage.</p>
+    </div>
+</div>
+</div>
+<br><br>
+
+<button id="scrollToTopBtn" onclick="scrollToTop()">scroll up</button>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="script2.js"></script>
+<script src="/slides/slidesScript.js"></script>
+</body>
+</html>

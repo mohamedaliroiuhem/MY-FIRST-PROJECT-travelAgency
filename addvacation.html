@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Vacation</title>
+    <link rel="stylesheet" href="/addVacation/add.css">
+</head>
+<body>
+    <div class="secondbar">
+        <div class="logo">
+            <a href="index.html">
+          <img src="/images/Yellow and Green Modern Illustration Tour and Travel Agency Logo (1).png" alt="Logo">
+            </a> </div>
+
+        <div class="navigation-bar">
+            <a href="index.html" >HOME</a>
+        </div>
+      </div>
+    
+      <form class="form">
+        <p class="title">Add a New Destination</p>
+    
+            <div class="flex">
+            <label>
+                <input class="input" type="text" placeholder="" id="price" name="price"required="">
+                <span>price</span>
+            </label>
+    
+     
+        </div>  
+                
+        <label>
+            <input class="input"id="imageInput" type="file"id="imageInput" name="image" placeholder="" required="">
+            <span>Image</span>
+        </label> 
+            
+        <label>
+            <input class="input" type="date"name="startDate" id="statDate" placeholder="" required="">
+            <span>starting date</span>
+        </label>
+        <label>
+            <input class="input" type="date" id="endDate" name="endDate" placeholder="" required="">
+            <span>ending date</span>
+        </label>
+        <button class="submit" type="button" onclick="addVacation()">Add</button>
+     
+        <form id="filterForm">
+          <label for="filterKeyword">search for a destintion:</label>
+          <input type="text" id="filterKeyword" name="filterKeyword">
+          <button class="search" type="button" onclick="applyFilter()">search</button>
+      </form>
+    </form>
+ 
+
+
+<div class="card-container" id="vacationList"></div>
+
+<script src="/addVacation/add.js">
+
+
+</script>
+
+</body>
+</html>
